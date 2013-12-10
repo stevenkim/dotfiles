@@ -3,6 +3,7 @@
 files="
 bashrc
 gitconfig
+git-prompt.sh
 tmux.conf
 vim
 vimrc
@@ -12,7 +13,7 @@ backup_dir=~/dotfiles_backup
 mkdir -p $backup_dir
 
 for file in $files; do
-  if [ -e ~/.$file ]; then
+  if [ -e ~/.$file ] && [ ! -h ~/.$file ]; then
     mv ~/.$file ~/dotfiles_backup/.$file
     echo "backing up ~/.$file"
   fi

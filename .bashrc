@@ -12,13 +12,11 @@ if [ -f /home/engshare/admin/scripts/master.bashrc ]; then
   . /home/engshare/admin/scripts/master.bashrc
 fi
 
-source /mnt/vol/hive/dis/lib/utils/hive.include
+if [ -f /mnt/vol/hive/dis/lib/utils/hive.include ]; then
+  source /mnt/vol/hive/dis/lib/utils/hive.include
+fi
+
 source ~/.git-prompt.sh
-
-# User specific environment and startup programs
-
-export JAVA_HOME=/usr/local/jdk-7u2-64/
-export PATH=$HOME/bin:/usr/local/apache-ant-1.8.4/bin:/usr/local/jdk-7u2-64/bin:$PATH
 
 shopt -s checkwinsize
 
