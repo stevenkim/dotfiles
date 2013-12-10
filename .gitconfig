@@ -1,0 +1,67 @@
+[alias]
+  fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#`git rev-parse --show-toplevel`/#"' -
+  vim   = ! sh -c 'vim `git fshow $1`' -
+
+  ah     = commit --amend -C HEAD
+  am     = amend
+  amq    = commit --amend -C HEAD
+  amendq = commit --amend -C HEAD
+  aq     = commit --amend -C HEAD
+  ar     = archive
+  bb     = bisect bad
+  bg     = bisect good
+  br     = branch
+  ca     = commit -a
+  ci     = commit
+  co     = checkout
+  com    = checkout master
+  cot    = checkout trunk
+  di     = diff
+  diffs  = diff --stat
+  diffq  = diff --stat
+  dfq    = diff --stat
+  dno    = diff --name-only
+  dq     = diff --stat
+  dts    = difftool -y HEAD~1
+  fe     = fetch
+  l      = log
+  lo     = log
+  logs = log --stat
+  pi     = cherry-pick
+  pick   = cherry-pick
+  rb     = rebase
+  rbi    = rebase -i
+  sd     = svn dcommit
+  sl     = svn log
+  st     = status
+  sn     = show --name-only
+  showq  = show --stat
+  shows  = show --stat
+  sq     = show --stat
+  ss     = show --stat
+  stat   = diff --stat
+  tst    = status
+
+  ab     = !git-active-branches
+  arb    = !git-archive-branch
+  au     = !git-add-untracked
+  coc    = !git-checkout-clean
+  cp     = !git-checkpoint
+  f      = !git-files
+  fm     = !git-files-modified
+  iu     = !git-ignore-untracked
+  ki     = !git-kill
+  pu     = !git-pull-master
+  ra     = !git-rebase-active
+  rem    = !git-remaster
+  rt     = !git-root-dir
+  sbr    = !git-say-branch
+  sr     = !git-svn-rev
+  uf     = !git-untracked-files
+  up     = !git-up-branch
+  vn     = !git-root-svn
+  logg   = log --graph --pretty=tformat:'%Cred%h %Cgreen%cd %C(bold blue)%an%Creset%C(yellow)%d%Creset %s' --date=short --all
+
+  fb     = ! sh -c 'git fetch && git rebase $1'
+[color]
+  ui = true
