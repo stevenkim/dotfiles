@@ -1,6 +1,7 @@
 #!/bin/sh
 
 files="
+bashrc
 gitconfig
 tmux.conf
 vim
@@ -11,7 +12,11 @@ backup_dir=~/dotfiles_backup
 mkdir -p $backup_dir
 
 for file in $files; do
-  mv ~/.$file ~/dotfiles_backup/.$file
+  if [ -e ~/.$file ]; then
+    mv ~/.$file ~/dotfiles_backup/.$file
+    echo "backing up ~/.$file"
+  fi
   ln -s ~/dotfiles/.$file ~/.$file
+  echo "symlinking ~/.$file"
 done
 
