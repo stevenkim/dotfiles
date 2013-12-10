@@ -3,17 +3,19 @@ call pathogen#infect()
 "-----------------------
 " FB Stuff
 "-----------------------
-source /home/engshare/admin/scripts/vim/biggrep.vim
+if filereadable("/home/engshare/admin/scripts/vim/biggrep.vim")
+  source /home/engshare/admin/scripts/vim/biggrep.vim
 
-nmap <Leader>gf :TBGS function <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>gw :TBGW<CR>
-nmap <Leader>gc :TBGS class <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>fw :FBGW<CR>
-vmap <Leader>gs y:TBGS <C-R>0<CR><CR>
-nmap <Leader>k :!t %<CR>
-nmap <Leader>d :%s/function test/function atest/g<CR>
-nmap <Leader>e :%s/function atest/function test/g<CR>
-nmap <Leader>h :HackMake<CR>
+  nmap <Leader>gf :TBGS function <C-R>=expand("<cword>")<CR><CR>
+  nmap <Leader>gw :TBGW<CR>
+  nmap <Leader>gc :TBGS class <C-R>=expand("<cword>")<CR><CR>
+  nmap <Leader>fw :FBGW<CR>
+  vmap <Leader>gs y:TBGS <C-R>0<CR><CR>
+  nmap <Leader>k :!t %<CR>
+  nmap <Leader>d :%s/function test/function atest/g<CR>
+  nmap <Leader>e :%s/function atest/function test/g<CR>
+  nmap <Leader>h :HackMake<CR>
+endif
 
 "-----------------------
 " General
