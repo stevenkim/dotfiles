@@ -1,1 +1,0 @@
-/home/stevenkim/dotfiles/.vim
