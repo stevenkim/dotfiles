@@ -5,16 +5,20 @@ call pathogen#infect()
 "-----------------------
 if filereadable("/home/engshare/admin/scripts/vim/biggrep.vim")
   source /home/engshare/admin/scripts/vim/biggrep.vim
+  source /home/engshare/admin/scripts/vim/plugin/hack.vim
+  source /mnt/vol/engshare/admin/scripts/vim/fbvim.vim
 
-  nmap <Leader>gf :TBGS function <C-R>=expand("<cword>")<CR><CR>
+  nmap <Leader>gf :TBGR function <C-R>=expand("<cword>")<CR>(<CR>
+  nmap <Leader>gm :TBGR @providesModule <C-R>=expand("<cword>")<CR>$<CR>
   nmap <Leader>gw :TBGW<CR>
-  nmap <Leader>gc :TBGS class <C-R>=expand("<cword>")<CR><CR>
-  nmap <Leader>fw :FBGW<CR>
+  nmap <Leader>gc :TBGR class <C-R>=expand("<cword>")<CR> <CR>
   vmap <Leader>gs y:TBGS <C-R>0<CR><CR>
   nmap <Leader>k :!t %<CR>
   nmap <Leader>d :%s/function test/function atest/g<CR>
   nmap <Leader>e :%s/function atest/function test/g<CR>
   nmap <Leader>h :HackMake<CR>
+  nmap <Leader>ff :FBVimFilenameSearch<CR>
+  nmap <Leader>ft :FBVimMuralSearchCurrentWord<CR>
 endif
 
 "-----------------------
