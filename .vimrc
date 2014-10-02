@@ -88,6 +88,7 @@ map <leader>tp :tabprevious<cr>
 " Plugins
 "-----------------------
 nmap <Leader>nt :NERDTreeToggle<CR>
+nmap <Leader>nf :NERDTreeFind<CR>
 
 let Tlist_WinWidth=40
 let Tlist_GainFocus_On_ToggleOpen = 1

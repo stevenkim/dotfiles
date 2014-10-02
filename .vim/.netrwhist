@@ -1,2 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/data/users/stevenkim/www-git/flib/insights/collection/collector'
+let g:netrw_dirhist_2='/data/users/stevenkim/www-git/flib/intern/unittest/insights/collection'
+let g:netrw_dirhist_3='/data/users/stevenkim/www-git/flib/insights/collection/collector/__tests__'
+let g:netrw_dirhist_4='/data/users/stevenkim/www-git/flib/insights/collection/context_logger/nectar_logger'
+let g:netrw_dirhist_5='/data/users/stevenkim/www-git/flib/insights/logging/pages/__tests__'
+let g:netrw_dirhist_6='/data/users/stevenkim/www-git/flib/insights/logging/pages'
