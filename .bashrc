@@ -3,9 +3,9 @@
 # User specific aliases and functions
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
+#if [ -f /etc/bashrc ]; then
+#  . /etc/bashrc
+#fi
 
 # Source Facebook definitions
 if [ -f /home/engshare/admin/scripts/master.bashrc ]; then
@@ -51,4 +51,4 @@ function r() {
 }
 
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: $(__git_ps1) \[\e[33m\]\w\[\e[0m\]\n\$ '
-
+export PROMPT_COMMAND=''

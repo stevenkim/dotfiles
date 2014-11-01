@@ -8,7 +8,7 @@ if filereadable("/home/engshare/admin/scripts/vim/biggrep.vim")
   source /home/engshare/admin/scripts/vim/plugin/hack.vim
   source /mnt/vol/engshare/admin/scripts/vim/fbvim.vim
 
-  nmap <Leader>gf :TBGR function <C-R>=expand("<cword>")<CR>(<CR>
+  nmap <Leader>gf :TBGR function <C-R>=expand("<cword>")<CR>\(<CR>
   nmap <Leader>gm :TBGR @providesModule <C-R>=expand("<cword>")<CR>$<CR>
   nmap <Leader>gw :TBGW<CR>
   nmap <Leader>gc :TBGR class <C-R>=expand("<cword>")<CR> <CR>
@@ -90,7 +90,7 @@ map <leader>tp :tabprevious<cr>
 nmap <Leader>nt :NERDTreeToggle<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 
-let Tlist_WinWidth=40
+let Tlist_WinWidth=60
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Sort_Type = "name"
