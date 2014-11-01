@@ -8,11 +8,16 @@ if filereadable("/home/engshare/admin/scripts/vim/biggrep.vim")
   source /home/engshare/admin/scripts/vim/plugin/hack.vim
   source /mnt/vol/engshare/admin/scripts/vim/fbvim.vim
 
+  if match(getcwd(), '\c\/fbcode\/') >= 0
+    nmap <Leader>gw :FBGW<CR>
+    vmap <Leader>gs y:FBGS <C-R>0<CR><CR>
+  elseif match(getcwd(), '\c\/www-') >= 0
+    nmap <Leader>gw :TBGW<CR>
+    vmap <Leader>gs y:TBGS <C-R>0<CR><CR>
+  endif
   nmap <Leader>gf :TBGR function <C-R>=expand("<cword>")<CR>\(<CR>
   nmap <Leader>gm :TBGR @providesModule <C-R>=expand("<cword>")<CR>$<CR>
-  nmap <Leader>gw :TBGW<CR>
   nmap <Leader>gc :TBGR class <C-R>=expand("<cword>")<CR> <CR>
-  vmap <Leader>gs y:TBGS <C-R>0<CR><CR>
   nmap <Leader>k :!t %<CR>
   nmap <Leader>d :%s/function test/function atest/g<CR>
   nmap <Leader>e :%s/function atest/function test/g<CR>
@@ -84,6 +89,8 @@ map <leader>tm :tabmove
 map <leader>tt :tabnext<cr>
 map <leader>tp :tabprevious<cr>
 
+map <Leader>nh :noh<cr>
+
 "-----------------------
 " Plugins
 "-----------------------
@@ -109,4 +116,7 @@ let g:airline_section_a=''
 let g:airline_section_y=''
 let g:airline_theme='bubblegum'
 set ttimeoutlen=50
+
+" a.vim
+nmap <Leader>a :A<CR>
 
